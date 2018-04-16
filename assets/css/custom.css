@@ -1,71 +1,75 @@
-/**
- * DEFAULTS
- *
- */
+/*------------------------------------*\
+    RESET
+\*------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0b1 | 201101 
+    NOTE:WORK IN PROGRESS
+    USE WITH CAUTION AND TEST WITH ABANDON */
 
-@-ms-viewport {
-	width: device-width;
+html,body,div,span,applet,object,iframe,
+h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+a,abbr,acronym,address,big,cite,code,
+del,dfn,em,img,ins,kbd,q,s,samp,
+small,strike,strong,sub,sup,tt,var,
+b,u,i,center,
+dl,dt,dd,ol,ul,li,
+fieldset,form,label,legend,
+table,caption,tbody,tfoot,thead,tr,th,td,
+article,aside,canvas,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section,summary,
+time,mark,audio,video{
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    font:inherit;
+    vertical-align:baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section{
+    display:block;
+}
+body{
+    line-height:1;
+}
+ol,ul{
+    list-style:none;
+}
+blockquote,q{
+    quotes:none;
+}
+blockquote:before,blockquote:after,
+q:before,q:after{
+    content:’’;
+    content:none;
+}
+/* remember to define visible focus styles! 
+:focus{
+    outline:?????;
+} */
+
+/* remember to highlight inserts somehow! */
+ins{
+    text-decoration:none;
+}
+del{
+    text-decoration:line-through;
+}
+
+table{
+    border-collapse:collapse;
+    border-spacing:0;
 }
 
 
-* {
-	margin: 0em;
-	padding: 0em;
-}
-
-html, body, div, span, applet, object, h1, h2, h3, h4, h5, h6, p, blockquote, pre, em, a, abbr, iframe, cite, code, ins, kbd, fieldset, legend, 
-table, strong, form, td, th, dl, tr, img, q, s, sub, acronym, address, label, ul, ol, li, caption, dt, thead, tbody, tfoot, small, font, dfn{
-	margin:0;
-	padding: 0;
-	border:0;
-	outline: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-	background: transparent;
 
 
-}
 
-body {
-	overflow-x: hidden !important;
-	width: 100%;
-	height: 100%;
-	line-height: 1;
-}
-
-
-h1,h2,h3,h4,h5,h6 {
-	text-align: center;
-}
-ol, ul {
-	list-style: none;
-}
-
-blockquote, q {
-	quotes: none;
-}
-
-blockqoute:before, blockquote:after, q:before, q:after {
-	content: '';
-	content: none;
-}
-:focus {
-	outline: none;
-}
-ins {
-	text-decoration: none;
-}
-del {
-	text-decoration: line-through;
-}
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-
-/*MAIN*/
+/*------------------------------------*\
+    $MAIN
+\*------------------------------------*/
 
 
 body {
@@ -110,7 +114,7 @@ header {
 	/* text-align: center; */
 	/* border-bottom: 1px solid #ff4e50; */
 	z-index: 100;
-	padding: 10px 50px 10px 50px;
+	/*padding: 10px 50px 10px 50px;*/
 	/* margin: 0 auto; */
 	/* text-align: left !important; */
 }
@@ -131,10 +135,15 @@ header {
 }
 
 nav {
-	float: right;
-	padding: 12px 0 0 0;
+	width: 100%;
+	/*float: right;
+	padding: 12px 0 0 0;*/
 	/* display: inline-block; */
-	margin-right: 165px;
+	/*margin-right: 165px;*/
+	position: relative;
+	display: block;
+	height: auto;
+	margin-top: 10px;
 }
 
 #menu-icon {
@@ -228,7 +237,7 @@ p {
 
 .sticky-nav {
 	top: 0;
-	background-color: #444;
+	background-color: #212121;
 }
 
 
@@ -397,7 +406,7 @@ footer {
 	width: 100%;
 	border-top: 1px solid #ff4e50;
 	text-align: left !important;
-	padding-bottom: 20px;
+	/*padding-bottom: 20px;*/
 }
 
 
@@ -417,7 +426,7 @@ footer {
     text-align: left;
 }
 
-.footer a {
+.footer a, .footer p {
     color: #b3b3b3;
     font-size: 11px;
     font-weight: 300;
@@ -433,33 +442,106 @@ footer {
 	margin-bottom: 20px;
 }
 
-h4.company, .red-link a {
+h4.company, .red-link a, a.red-link{
 	color: #ff4e50;
 }
-@media only screen and (max-width: 640px) {
+
+.bottom-footer {
+	margin-top: 40px;
+	border-top: 1px solid #ddd;
+	text-align: center;
+	padding: 20px 0px 0px 10px;
+	color: #ddd;
+}
+
+nav ul {
+    float: right;
+    margin-top: 10px;
+    margin-right:80px
+}
+
+.toggler {
+    display: none;
+    text-align: left;
+    float: right;
+    margin-right: 80px;
+    margin-top: 10px;
+    font-size: 1.45em;
+    color: #eee;
+    border: 1px solid #eee;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+nav li:hover {
+    background-color: #ff4e50;
+    /* color: #444; */
+}
+
+@media only screen and (max-width: 768px) {
 	header {
 		/*position: inherit;*/
 	}
 
-	#menu-icon {
+	.toggler {
 		display: block;
-		display: inline-block;
 	}
 
-	nav ul, nav:active ul {
+	nav ul {
 		display: none;
 		position: absolute;
-		padding: 20px;
+		margin: 74px auto 0px auto;
+		background: #3c3c3c;
+		width: 100%;
 	}
 
 	nav li {
 		text-align: center;
 		width: 100%;
-		padding: 10px;
+		padding: 20px 0px;
 		margin: 0;
+		border-top: 1px solid #444;
+		cursor:  pointer;
 	}
 
-	nav:hover ul {
+	.active {
 		display: block;
 	}
+
+	.partner {
+		width: 35%;
+		margin-bottom: 10%;
+	}
+
+	.grid-4 {
+		width: 100%;
+		margin-bottom: 20px;
+		margin-left: 40px;
+	}
+
+
+
+
+}
+
+
+@media only screen and (max-width: 658px) {
+
+	.partner {
+		clear: both;
+		margin: 0 auto;
+		padding: 0px;
+		display: block;
+		width: 50%;
+		margin-left: 26%;
+		/* margin-right: 10%; */
+		margin-bottom: 200px;
+	}
+
+ 	.grid-3 {
+		margin-left: 21%;
+
+ 	}
+
+
 }
