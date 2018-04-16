@@ -236,7 +236,7 @@ p {
 
 .sticky-nav {
 	top: 0;
-	background-color: #444;
+	background-color: #212121;
 }
 
 
@@ -452,30 +452,95 @@ h4.company, .red-link a, a.red-link{
 	padding: 20px 0px 0px 10px;
 	color: #ddd;
 }
-@media only screen and (max-width: 640px) {
+
+nav ul {
+    float: right;
+    margin-top: 10px;
+    margin-right:80px
+}
+
+.toggler {
+    display: none;
+    text-align: left;
+    float: right;
+    margin-right: 80px;
+    margin-top: 10px;
+    font-size: 1.45em;
+    color: #eee;
+    border: 1px solid #eee;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+nav li:hover {
+    background-color: #ff4e50;
+    /* color: #444; */
+}
+
+@media only screen and (max-width: 768px) {
 	header {
 		/*position: inherit;*/
 	}
 
-	#menu-icon {
+	.toggler {
 		display: block;
-		display: inline-block;
 	}
 
-	nav ul, nav:active ul {
+	nav ul {
 		display: none;
 		position: absolute;
-		padding: 20px;
+		margin: 74px auto 0px auto;
+		background: #3c3c3c;
+		width: 100%;
 	}
 
 	nav li {
 		text-align: center;
 		width: 100%;
-		padding: 10px;
+		padding: 20px 0px;
 		margin: 0;
+		border-top: 1px solid #444;
+		cursor:  pointer;
 	}
 
-	nav:hover ul {
+	.active {
 		display: block;
 	}
+
+	.partner {
+		width: 35%;
+		margin-bottom: 10%;
+	}
+
+	.grid-4 {
+		width: 100%;
+		margin-bottom: 20px;
+		margin-left: 40px;
+	}
+
+
+
+
+}
+
+
+@media only screen and (max-width: 658px) {
+
+	.partner {
+		clear: both;
+		margin: 0 auto;
+		padding: 0px;
+		display: block;
+		width: 50%;
+		margin-left: 26%;
+		/* margin-right: 10%; */
+		margin-bottom: 200px;
+	}
+
+ 	.grid-3 {
+		margin-left: 21%;
+
+ 	}
+
+
 }
