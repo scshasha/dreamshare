@@ -1,19 +1,35 @@
-////////////////////////////////////////////////
-// STICK NAVIGATION BACKGROUND COLOR CHAGNGER //
-////////////////////////////////////////////////
 
-window.onscroll = function() {
-	isStickyNavigation();
-};
+$(document).ready(function(){
 
-var navbar = document.getElementById('navbar');
+	////////////////////////////////////////////////
+	// STICK NAVIGATION BACKGROUND COLOR CHAGNGER //
+	////////////////////////////////////////////////
+	window.onscroll = function() {
+		isStickyNavigation();
+	};
 
-var sticky = navbar.offsetTop;
+	var navbar = document.getElementById('navbar');
 
-function isStickyNavigation() {
-	if (window.pageYOffset > sticky) {
-		navbar.classList.add('sticky-nav');
-	} else {
-		navbar.classList.remove('sticky-nav');
+	var sticky = navbar.offsetTop;
+
+	function isStickyNavigation() {
+		if (window.pageYOffset > sticky) {
+			navbar.classList.add('sticky-nav');
+		} else {
+			navbar.classList.remove('sticky-nav');
+		}
 	}
-}
+
+
+	///////////////
+	/// MENU BAR //
+	///////////////
+	
+	$('.menu').click(function() {
+		$('nav ul').toggleClass('active');
+		if (window.pageYOffset == 0) {
+			$('header').toggleClass('sticky-nav');
+		}
+	});
+
+});
