@@ -247,7 +247,8 @@
 					</ul></div>
 				</div>
 				<div class="clearfix"></div>
-				<div class="bottom-footer"><p><?=sprintf('&copy; %s <a href="/" class="red-link">DREAMSHARE</a>.', date('Y'));?></p></div>
+				<div class="bottom-footer">
+					<p><?=sprintf('&copy; %s <a href="/" class="red-link">DREAMSHARE</a>.', date('Y'));?></p></div>
 			</div>
 		</footer>
 		<!-- </div> -->

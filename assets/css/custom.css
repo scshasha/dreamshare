@@ -143,6 +143,7 @@ nav {
 	position: relative;
 	display: block;
 	height: auto;
+	margin-top: 10px;
 }
 
 #menu-icon {
