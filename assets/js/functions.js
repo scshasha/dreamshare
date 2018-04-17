@@ -32,4 +32,36 @@ $(document).ready(function(){
 		}
 	});
 
+	///////////////////////
+	/// MENU LINK CLICKS //
+	///////////////////////
+
+	$('nav ul li').click((event)=>{
+		event.preventDefault();
+
+		navigationRouter(event);
+		reload();
+	});
+
+	// $('nav ul li a').click((event)=> {
+	// 	event.preventDefault();
+
+	// 	return navigationRouter(event);
+	// });
+
+	function navigationRouter(args)
+	{
+		var base_url ='http://localhost/apps/website/dreamshare'; // window.location.href; // temp
+
+		var hyper_link = args.currentTarget.innerHTML;
+		var route_to = $(hyper_link).attr('href');
+
+		if (route_to == '') {
+			var route_to = '/';
+		}
+
+
+		return	window.location = base_url + route_to;
+	}
+
 });

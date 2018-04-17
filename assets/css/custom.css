@@ -42,7 +42,7 @@ blockquote,q{
 }
 blockquote:before,blockquote:after,
 q:before,q:after{
-    content:’’;
+    content:â€™â€™;
     content:none;
 }
 /* remember to define visible focus styles! 
@@ -386,7 +386,7 @@ h3 {
 .gallery-wrap {
 	display: block;
 	width: 100%;
-	margin-top: 20px;
+	/* margin-top: 20px; */
 }
 
 /*.gallery-wrap:nth-child(2) {
@@ -478,6 +478,15 @@ nav li:hover {
     /* color: #444; */
 }
 
+.mobile-only {
+	display: none;
+}
+
+	.grid-3 {
+		/*margin-top: 10px;*/
+		margin-bottom: 10px;
+	}
+
 @media only screen and (max-width: 768px) {
 	header {
 		/*position: inherit;*/
@@ -490,7 +499,7 @@ nav li:hover {
 	nav ul {
 		display: none;
 		position: absolute;
-		margin: 74px auto 0px auto;
+		margin: 64px auto 0px auto;
 		background: #3c3c3c;
 		width: 100%;
 	}
@@ -513,12 +522,25 @@ nav li:hover {
 		margin-bottom: 10%;
 	}
 
+
 	.grid-4 {
-		width: 100%;
+		width: 25.33%;
 		margin-bottom: 20px;
 		margin-left: 40px;
 	}
+	.grid-4:first-child {
+		width: 100%;
+		display: block;		
+	}
 
+	.grid-3 {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	.mobile-only {
+		display: inline-block;
+	}
 
 
 
@@ -527,6 +549,11 @@ nav li:hover {
 
 @media only screen and (max-width: 658px) {
 
+	.grid-4 {
+		width: 100%;
+		margin-bottom: 20px;
+		margin-left: 40px;
+	}
 	.partner {
 		clear: both;
 		margin: 0 auto;
