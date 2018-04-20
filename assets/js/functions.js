@@ -36,18 +36,17 @@ $(document).ready(function(){
 	/// MENU LINK CLICKS //
 	///////////////////////
 
-	$('nav ul li').click((event)=>{
+	$('nav ul li').click(function(event) {
 		event.preventDefault();
 
-		navigationRouter(event);
-		reload();
+		return navigationRouter(event);
 	});
 
-	// $('nav ul li a').click((event)=> {
-	// 	event.preventDefault();
+	$('nav ul li a').click(function(event) {
+		event.preventDefault();
 
-	// 	return navigationRouter(event);
-	// });
+		return navigationRouter(event);
+	});
 
 	function navigationRouter(args)
 	{
