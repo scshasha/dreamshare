@@ -203,6 +203,13 @@
 							<div class="img-caption">Travelling</div>
 						</a>
 					</div>
+					<div class="gellery-item grid-3 mobile-only">
+						<a href="">
+							<img src="./assets/images/Product-5.jpg">
+							<div class="img-caption">Basically Books</div>
+						</a>
+					</div>
+
 				</div>
 			</div>
 			<div class="clearfix"></div>
@@ -258,5 +265,7 @@
   src="https://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
+  <script
+  src="./assets/js/jquery.js"></script>
 <script type="text/javascript" src="./assets/js/functions.js"></script>
 </html>
