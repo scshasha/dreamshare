@@ -2,7 +2,7 @@
 $(document).ready(function(){
 
 	////////////////////////////////////////////////
-	// STICK NAVIGATION BACKGROUND COLOR CHAGNGER //
+	// STICK NAVIGATION BACKGROUND COLOR CHANGER //
 	////////////////////////////////////////////////
 	window.onscroll = function() {
 		isStickyNavigation();
@@ -50,7 +50,7 @@ $(document).ready(function(){
 
 	function navigationRouter(args)
 	{
-		var base_url ='http://localhost/apps/website/dreamshare'; // window.location.href; // temp
+		var base_url ='http://localhost/apps/website/dreamshare'; // Make an .env for this??
 
 		var hyper_link = args.currentTarget.innerHTML;
 		var route_to = $(hyper_link).attr('href');
